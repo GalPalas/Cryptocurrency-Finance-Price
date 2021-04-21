@@ -2,7 +2,7 @@ import React from "react";
 
 function TableBody({ data }) {
   return (
-    <tbody>
+    <tbody className="tbody">
       {data.map((coin) => (
         <tr key={coin.id}>
           <td>

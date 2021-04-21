@@ -21,23 +21,13 @@ function App() {
   const filteredCoins = useSelector(getFilteredCoins(search));
 
   return (
-    <div className="container">
-      <div className="cooin-search justify-content-center">
-        <div className="row padding">
-          <div className="col-12">
-            <h1 className="coin-text text-center">Search a currency</h1>
-          </div>
+    <div className="container fluid">
+      <div className="row justify-content-center padding">
+        <div className="col-12">
+          <h1 className="coin-text text-center">Search a currency</h1>
         </div>
-        <div className="row  justify-content-center">
-          <div className="col-md-6 padding">
-            <Input onFilterChange={handleChange} />
-          </div>
-          <div className="row padding">
-            <div className="col-12">
-              <Table data={filteredCoins} />
-            </div>
-          </div>
-        </div>
+        <Input onFilterChange={handleChange} />
+        <Table data={filteredCoins} />
       </div>
     </div>
   );
